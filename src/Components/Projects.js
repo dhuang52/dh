@@ -32,6 +32,7 @@ class Project extends React.Component {
             <Col span={8}>
               <Card
                 hoverable
+                cover={<img alt="img" src={require("../Icons/nlp-fairytales.png")} />}
               >
                 <Meta
                   title={<div>NLP Fairy Tales <a
@@ -51,6 +52,7 @@ class Project extends React.Component {
             <Col span={8}>
               <Card
                 hoverable
+                cover={<img alt="img" src={require("../Icons/nyc-gentrification.png")} />}
               >
                 <Meta
                   title={<div>Gentrification in NYC <a

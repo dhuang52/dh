@@ -7,14 +7,92 @@ import Projects from "./Components/Projects";
 import Connect from "./Components/Connect";
 import './App.css';
 
-function App() {
-  return (
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state= {
+      intro: "process",
+      experience: "wait",
+      projects: "wait",
+      connect: "wait",
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  isInViewport = (bounds) => (
+    (bounds.top | 0) >= 0 &&
+    bounds.left >= 0 &&
+    Math.abs(bounds.y) <= (window.innerHeight || document.documentElement.clientHeight) &&
+    bounds.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+
+
+  handleScroll = () => {
+    let introBounds = document.getElementById("intro").getBoundingClientRect();
+    let expBounds = document.getElementById("experience").getBoundingClientRect();
+    let projBounds = document.getElementById("projects").getBoundingClientRect();
+    let connBounds = document.getElementById("connect").getBoundingClientRect();
+    if(this.isInViewport(introBounds)) {
+      if(this.state.intro !== "process") {
+        this.setState({
+          intro: "process",
+          experience: "wait",
+          projects: "wait",
+          connect: "wait",
+        });
+      }
+    } else if(this.isInViewport(expBounds)) {
+      if(this.state.experience !== "process") {
+        this.setState({
+          intro: "finish",
+          experience: "process",
+          projects: "wait",
+          connect: "wait",
+        });
+      }
+    } else if(this.isInViewport(projBounds)) {
+      if(this.state.projects !== "process") {
+        this.setState({
+          intro: "finish",
+          experience: "finish",
+          projects: "process",
+          connect: "wait",
+        });
+      }
+    } else if(this.isInViewport(connBounds)) {
+      if(this.state.connect !== "process") {
+        this.setState({
+          intro: "finish",
+          experience: "finish",
+          projects: "finish",
+          connect: "process",
+        });
+      }
+    }
+  }
+
+  render() {
+    return (
     <div>
-      <Row id="intro">
-        <Col> <Header /> </Col>
+      <Row>
+        <Col>
+          <Header
+            intro={this.state.intro}
+            experience={this.state.experience}
+            projects={this.state.projects}
+            connect={this.state.connect}
+          />
+        </Col>
       </Row>
 
-      <Row className="section">
+      <Row className="section" id="intro">
         <Col> <Intro /> </Col>
       </Row>
 
@@ -31,6 +109,7 @@ function App() {
       </Row>
     </div>
   );
+  }
 }
 
 export default App;

@@ -1,23 +1,20 @@
 import React from 'react';
-import { Row, Col, Layout, Menu, Icon, } from 'antd';
+import { Layout, Menu, Icon, } from 'antd';
 import descriptions from "./Data/descriptions.js";
 
-
-console.log(descriptions);
-const { SubMenu } = Menu;
 const {
-  Header, Content, Footer, Sider,
+  Content, Sider,
 } = Layout;
 
 const dark = false;
 
-const icons = {
-  1: "laptop",
-  2: "laptop",
-  3: "mobile",
-  4: "team",
-  5: "experiment"
-}
+// const icons = {
+//   1: "laptop",
+//   2: "laptop",
+//   3: "mobile",
+//   4: "team",
+//   5: "experiment"
+// }
 
 class Experience extends React.Component {
 
@@ -38,7 +35,6 @@ class Experience extends React.Component {
   handleChange = (item) => {
     let exp = descriptions[item.key];
     let name = document.getElementById("name");
-    // "<Icon type=" + icons[item.key] + " />" +
     name.innerHTML = "<b>"+exp.name+"</b>";
     name.href = exp.link
     document.getElementById("title").innerHTML = exp.title;
@@ -60,7 +56,7 @@ class Experience extends React.Component {
                     defaultSelectedKeys={['1']}
                     defaultOpenKeys={['sub1']}
                     style={{ height: '100%' }}
-                    theme={dark}
+                    theme={dark ? 'dark' : ''}
                     onClick={this.handleChange}
                   >
                     <Menu.Item key="1">Day Zero Diagnostics</Menu.Item>

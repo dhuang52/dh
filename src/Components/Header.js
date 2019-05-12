@@ -11,10 +11,10 @@ class Header extends React.Component {
     return (
       <PageHeader>
         <Steps className="header">
-          <Step status="process" title={<a href="#intro">About Me</a>} icon={<Icon type="user" />}></Step>
-          <Step status="wait" title={<a href="#experience">Experience</a>} icon={<Icon type="laptop" />} />
-          <Step status="wait" title={<a href="#projects">Projects</a>} icon={<Icon type="folder" />} />
-          <Step status="wait" title={<a href="#connect">Connect</a>} icon={<Icon type="share-alt" />} />
+          <Step status={this.props.intro} title={<a href="#intro">About Me</a>} icon={<Icon type="user" />}></Step>
+          <Step status={this.props.experience} title={<a href="#experience">Experience</a>} icon={<Icon type="laptop" />} />
+          <Step status={this.props.projects} title={<a href="#projects">Projects</a>} icon={<Icon type="folder" />} />
+          <Step status={this.props.connect} title={<a href="#connect">Connect</a>} icon={<Icon type="share-alt" />} />
         </Steps>
       </PageHeader>
     )

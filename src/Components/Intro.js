@@ -15,7 +15,7 @@ class Intro extends React.Component {
       <div>
         <h3>Hey, what's up?</h3>
         <h1><b>I'm David Huang.</b></h1>
-        <h3>I'm a student 👨‍💻/music producer 🎧/thinker 🤔.</h3>
+        <h3>I'm a student <span role='img' aria-label='cs'>‍👨‍💻</span>/music producer <span role='img' aria-label='headphone'>🎧</span>/thinker <span role='img' aria-label='thinking'>🤔</span>.</h3>
         <ul>
           <li>Education: <b>Washington University in St. Louis</b>, Class of <b>2020</b></li>
           <li>Majors: <b>Computer Science, Financial Engineering</b></li>
@@ -47,6 +47,7 @@ class Intro extends React.Component {
           <Col span={8}>
             <Card>
               <iframe
+                title='aries'
                 allow="autoplay *; encrypted-media *;"
                 frameBorder="0" height="450"
                 style={iframeStyle}
