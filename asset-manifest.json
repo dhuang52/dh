@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/dh/static/css/main.45edc3ef.chunk.css",
-    "main.js": "/dh/static/js/main.23c5d458.chunk.js",
-    "main.js.map": "/dh/static/js/main.23c5d458.chunk.js.map",
-    "runtime~main.js": "/dh/static/js/runtime~main.86765ed7.js",
-    "runtime~main.js.map": "/dh/static/js/runtime~main.86765ed7.js.map",
-    "static/css/2.4358233e.chunk.css": "/dh/static/css/2.4358233e.chunk.css",
-    "static/js/2.ad8cb037.chunk.js": "/dh/static/js/2.ad8cb037.chunk.js",
-    "static/js/2.ad8cb037.chunk.js.map": "/dh/static/js/2.ad8cb037.chunk.js.map",
-    "index.html": "/dh/index.html",
-    "precache-manifest.fb3934bb4d8df80d2dcf5e951d341ce6.js": "/dh/precache-manifest.fb3934bb4d8df80d2dcf5e951d341ce6.js",
-    "service-worker.js": "/dh/service-worker.js",
-    "static/css/2.4358233e.chunk.css.map": "/dh/static/css/2.4358233e.chunk.css.map",
-    "static/css/main.45edc3ef.chunk.css.map": "/dh/static/css/main.45edc3ef.chunk.css.map",
-    "static/media/nlp-fairytales.png": "/dh/static/media/nlp-fairytales.e5225faa.png",
-    "static/media/nyc-gentrification.png": "/dh/static/media/nyc-gentrification.36818d4e.png"
+    "main.css": "/static/css/main.45edc3ef.chunk.css",
+    "main.js": "/static/js/main.d928991a.chunk.js",
+    "main.js.map": "/static/js/main.d928991a.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.4358233e.chunk.css": "/static/css/2.4358233e.chunk.css",
+    "static/js/2.5f8907ae.chunk.js": "/static/js/2.5f8907ae.chunk.js",
+    "static/js/2.5f8907ae.chunk.js.map": "/static/js/2.5f8907ae.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.728dcbbee73762bee97318a76a20d255.js": "/precache-manifest.728dcbbee73762bee97318a76a20d255.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.4358233e.chunk.css.map": "/static/css/2.4358233e.chunk.css.map",
+    "static/css/main.45edc3ef.chunk.css.map": "/static/css/main.45edc3ef.chunk.css.map",
+    "static/media/nlp-fairytales.png": "/static/media/nlp-fairytales.e5225faa.png",
+    "static/media/nyc-gentrification.png": "/static/media/nyc-gentrification.36818d4e.png"
   }
 }
