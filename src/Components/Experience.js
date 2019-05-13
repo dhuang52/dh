@@ -59,11 +59,11 @@ class Experience extends React.Component {
                     theme={dark ? 'dark' : ''}
                     onClick={this.handleChange}
                   >
-                    <Menu.Item key="1">Day Zero Diagnostics</Menu.Item>
-                    <Menu.Item key="2">Shell TechWorks</Menu.Item>
-                    <Menu.Item key="3">Noonlight</Menu.Item>
-                    <Menu.Item key="4">Washington University in St. Louis</Menu.Item>
-                    <Menu.Item key="5">UNMC</Menu.Item>
+                    <Menu.Item key="1">{descriptions["1"].name}</Menu.Item>
+                    <Menu.Item key="2">{descriptions["2"].name}</Menu.Item>
+                    <Menu.Item key="3">{descriptions["3"].name}</Menu.Item>
+                    <Menu.Item key="4">{descriptions["4"].name}</Menu.Item>
+                    <Menu.Item key="5">{descriptions["5"].name}</Menu.Item>
                   </Menu>
                 </Sider>
                 <Content style={{ padding: '0 24px', minHeight: 280 }} id="description">

@@ -3,7 +3,23 @@ import { Row, Col, Card, Tag } from 'antd';
 
 const tagColor = "#FF6F61"
 
+const prompt = {
+  "card-1": "give it a listen",
+  "card-2": "they're nice",
+  "card-3": "idk..."
+}
+
 class Intro extends React.Component {
+
+  handleMouseEnter = (e) => {
+    console.log(e.target.id);
+    document.getElementById("prompt").innerHTML = prompt[e.target.id]
+  }
+
+  handleMouseLeave = () => {
+    document.getElementById("prompt").innerHTML = ""
+  }
+
   render() {
     const iframeStyle = {
       width: 100+"%",
@@ -42,10 +58,14 @@ class Intro extends React.Component {
             <Tag color={tagColor}>React/Redux</Tag>
           </Col>
         </Row>
-        <h3>Stuff I like:</h3>
+        <h3>Stuff I like: <b id="prompt"></b></h3>
         <Row gutter={16}>
           <Col span={8}>
-            <Card>
+            <Card
+              id="card-1"
+              onMouseEnter={() => document.getElementById("prompt").innerHTML = "give it a listen"}
+              onMouseLeave={this.handleMouseLeave}
+            >
               <iframe
                 title='aries'
                 allow="autoplay *; encrypted-media *;"
@@ -58,12 +78,20 @@ class Intro extends React.Component {
             </Card>
           </Col>
           <Col span={8}>
-            <Card>
+            <Card
+              id="card-2"
+              onMouseEnter={() => document.getElementById("prompt").innerHTML = "they're nice"}
+              onMouseLeave={this.handleMouseLeave}
+            >
               Rainy days
             </Card>
           </Col>
           <Col span={8}>
-            <Card>
+            <Card
+              id="card-3"
+              onMouseEnter={() => document.getElementById("prompt").innerHTML = "idk"}
+              onMouseLeave={this.handleMouseLeave}
+            >
               Stuff to come
             </Card>
           </Col>
