@@ -11,13 +11,15 @@ class Project extends React.Component {
     return (
       <div>
         <h2><Icon type="folder" /> Projects</h2>
-          <Row gutter={16}>
+        <h4>These are just some of my projects; checkout my <a className="git" href="https://github.com/dhuang52">GitHub</a> to see more!</h4>
+          <Row gutter={16} className="projects">
             <Col span={8}>
               <Card
                 hoverable
               >
                 <Meta
                   title={<div>Heart Attack Prediction <a
+                          className="special-link"
                           href="https://github.com/dhuang52/heart-attack-prediction">
                             <Icon type="github" />
                           </a>
@@ -36,6 +38,7 @@ class Project extends React.Component {
               >
                 <Meta
                   title={<div>NLP Fairy Tales <a
+                          className="special-link"
                           href="https://github.com/dhuang52/nlp-fairy-tales">
                             <Icon type="github" />
                           </a>
@@ -56,10 +59,12 @@ class Project extends React.Component {
               >
                 <Meta
                   title={<div>Gentrification in NYC <a
+                          className="special-link"
                           href="https://github.com/DavLiet/final_project_457">
                             <Icon type="github" />
                           </a>
                           <a
+                            className="special-link"
                             href="https://washuvis.github.io/gentrification/">
                               <Icon type="export" />
                           </a>

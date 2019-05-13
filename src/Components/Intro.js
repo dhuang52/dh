@@ -13,7 +13,7 @@ class Intro extends React.Component {
     };
     return (
       <div>
-        <h3>Hey, what's up?</h3>
+        <h3>Hey <span role='img' aria-label='wave'>👋</span>, what's up?</h3>
         <h1><b>I'm David Huang.</b></h1>
         <h3>I'm a student <span role='img' aria-label='cs'>‍👨‍💻</span>/music producer <span role='img' aria-label='headphone'>🎧</span>/thinker <span role='img' aria-label='thinking'>🤔</span>.</h3>
         <ul>
@@ -59,7 +59,7 @@ class Intro extends React.Component {
           </Col>
           <Col span={8}>
             <Card>
-              Rainy days... Stuff to come
+              Rainy days
             </Card>
           </Col>
           <Col span={8}>

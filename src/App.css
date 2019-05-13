@@ -1,5 +1,9 @@
 @import '~antd/dist/antd.css';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 5px;
 }
@@ -8,6 +12,10 @@ body {
   padding-top: 7%;
   padding-bottom: 15px;
   padding-left: 70px;
+}
+
+.end-section {
+  padding-bottom: 7%;
 }
 
 .subsection {

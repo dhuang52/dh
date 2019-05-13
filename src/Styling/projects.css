@@ -1,3 +1,12 @@
-a {
+.special-link {
   padding-right: 4px;
+}
+
+/* .git {
+  color: #006E51;
+  font-weight: bold;
+} */
+
+.projects {
+  padding-right: 10px;
 }

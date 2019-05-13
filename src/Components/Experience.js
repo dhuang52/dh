@@ -46,7 +46,7 @@ class Experience extends React.Component {
   render() {
     return (
       <div>
-        <h2><Icon type="laptop" /> Experience</h2>
+        <h2 id="experience-section"><Icon type="laptop" /> Experience</h2>
           <Layout>
             <Content>
               <Layout style={{ padding: '24px 0', background: '#fff' }}>

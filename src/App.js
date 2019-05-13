@@ -36,7 +36,7 @@ class App extends React.Component {
 
   handleScroll = () => {
     let introBounds = document.getElementById("intro").getBoundingClientRect();
-    let expBounds = document.getElementById("experience").getBoundingClientRect();
+    let expBounds = document.getElementById("experience-section").getBoundingClientRect();
     let projBounds = document.getElementById("projects").getBoundingClientRect();
     let connBounds = document.getElementById("connect").getBoundingClientRect();
     if(this.isInViewport(introBounds)) {
@@ -104,7 +104,7 @@ class App extends React.Component {
         <Col> <Projects /> </Col>
       </Row>
 
-      <Row className="section" id="connect">
+      <Row className="section end-section" id="connect">
         <Col> <Connect /> </Col>
       </Row>
     </div>
