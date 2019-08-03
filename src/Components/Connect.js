@@ -16,7 +16,7 @@ class Connect extends React.Component {
               >
                 <Meta
                   title={<a
-                          href="https://www.linkedin.com/in/david-huang-48763816a/">
+                          href="https://www.linkedin.com/in/dhuang52/">
                             LinkedIn <Icon type="linkedin" />
                           </a>}
                   description="Let's connect!"
