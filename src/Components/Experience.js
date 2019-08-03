@@ -1,20 +1,13 @@
 import React from 'react';
 import { Layout, Menu, Icon, } from 'antd';
-import descriptions from "./Data/descriptions.js";
+import experience from "./Data/descriptions.js";
+import "../Styling/experience.css";
 
 const {
   Content, Sider,
 } = Layout;
 
 const dark = false;
-
-// const icons = {
-//   1: "laptop",
-//   2: "laptop",
-//   3: "mobile",
-//   4: "team",
-//   5: "experiment"
-// }
 
 class Experience extends React.Component {
 
@@ -28,12 +21,13 @@ class Experience extends React.Component {
     description.forEach((d) => {
       let li = document.createElement("li");
       li.innerHTML = d;
+      li.className = "bullet"
       list.appendChild(li);
     })
   }
 
   handleChange = (item) => {
-    let exp = descriptions[item.key];
+    let exp = experience[item.key];
     let name = document.getElementById("name");
     name.innerHTML = "<b>"+exp.name+"</b>";
     name.href = exp.link
@@ -47,32 +41,28 @@ class Experience extends React.Component {
     return (
       <div>
         <h2 id="experience-section"><Icon type="laptop" /> Experience</h2>
-          <Layout>
+          <Layout class="layout">
             <Content>
-              <Layout style={{ padding: '24px 0', background: '#fff' }}>
-                <Sider width={200} style={{ background: '#fff' }}>
+              <Layout style={{ width: '1000px', padding: '24px 0', background: 'white' }}>
+                <Sider width={200} style={{ background: '#ffff' }}>
                   <Menu
                     mode="inline"
-                    defaultSelectedKeys={['1']}
-                    defaultOpenKeys={['sub1']}
-                    style={{ height: '100%' }}
-                    theme={dark ? 'dark' : ''}
+                    defaultSelectedKeys={["0"]}
+                    defaultOpenKeys={["sub1"]}
+                    style={{ height: "100%" }}
+                    theme={dark ? "dark" : ""}
                     onClick={this.handleChange}
                   >
-                    <Menu.Item key="1">{descriptions["1"].name}</Menu.Item>
-                    <Menu.Item key="2">{descriptions["2"].name}</Menu.Item>
-                    <Menu.Item key="3">{descriptions["3"].name}</Menu.Item>
-                    <Menu.Item key="4">{descriptions["4"].name}</Menu.Item>
-                    <Menu.Item key="5">{descriptions["5"].name}</Menu.Item>
+                  {experience.map((d, i) => <Menu.Item key={i}>{d.name}</Menu.Item>)}
                   </Menu>
                 </Sider>
                 <Content style={{ padding: '0 24px', minHeight: 280 }} id="description">
                   <h2>
-                    <a id="name" href="https://www.dayzerodiagnostics.com/"><b>{descriptions["1"].name}</b></a>
+                    <a id="name" href={experience[0].link}><b>{experience[0].name}</b></a>
                   </h2>
-                  <h4><b><span id="title">{descriptions["1"].title}</span></b> from <b><span id="time">{descriptions["1"].time}</span></b></h4>
+                  <h4><b><span id="title">{experience[0].title}</span></b> from <b><span id="time">{experience[0].time}</span></b></h4>
                   <ul id="descriptions">
-                    <li>{descriptions["1"].description[0]}</li>
+                    {experience[0].description.map((d, i) => <li class="bullet">{d}</li>)}
                   </ul>
                 </Content>
               </Layout>
